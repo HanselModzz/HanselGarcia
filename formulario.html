@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        .campo {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .inline-label {
+            display: inline;
+            margin-left: 2px;
+        }
+
+        .botones {
+            margin-top: 15px;
+        }
+
+        .botones button {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="formulario.html" method="GET">
+
+        <div class="campo">
+            <label for="nombre">Nombre(s)</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+
+        <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+        </div>
+
+        <div class="campo">
+            <label for="edad">Edad</label>
+            <input type="text" id="edad" name="edad">
+        </div>
+
+
+        <input type="hidden" name="confidencial" value="12678">
+
+        <div class="campo">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contraseña">
+        </div>
+
+        <div class="campo">
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="35"></textarea>
+        </div>
+
+        <div class="campo">
+            <label for="pais">País</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione</option>
+                <option value="Mexico">México</option>
+                <option value="Colombia">Colombia</option>
+                <option value="España">España</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="imagen">Seleccione imagen ...</label>
+            <input type="file" id="imagen" name="imagen">
+        </div>
+
+        <div class="campo">
+            <label>Seleccione Sistema Operativo</label>
+            <div>
+                <input type="radio" id="win" name="so" value="Windows">
+                <label for="win" class="inline-label">Windows</label>
+            </div>
+            <div>
+                <input type="radio" id="lin" name="so" value="Linux">
+                <label for="lin" class="inline-label">Linux</label>
+            </div>
+            <div>
+                <input type="radio" id="mac" name="so" value="Mac">
+                <label for="mac" class="inline-label">Mac</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Seleccione</label>
+            <div>
+                <input type="checkbox" id="html5" name="tecnologia" value="HTML5">
+                <label for="html5" class="inline-label">HTML 5</label>
+            </div>
+            <div>
+                <input type="checkbox" id="css" name="tecnologia" value="CSS">
+                <label for="css" class="inline-label">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="js" name="tecnologia" value="Javascript">
+                <label for="js" class="inline-label">Javascript</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo">
+        </div>
+
+        <div class="campo">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="campo">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora">
+        </div>
+
+        <div class="campo">
+            <label for="numero">Número</label>
+            <input type="number" id="numero" name="numero" placeholder="Solo números">
+        </div>
+
+        <div class="campo">
+            <label for="rango">Rango Valores</label>
+            <input type="range" id="rango" name="rango">
+        </div>
+
+        <div class="botones">
+            <div>
+                <button type="button">Agregar</button>
+                <button type="button">Modificar</button>
+                <button type="button">Eliminar</button>
+            </div>
+            <div style="margin-top: 5px;">
+                <button type="submit">Aceptar</button>
+                <button type="reset">Limpiar Formulario</button>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
