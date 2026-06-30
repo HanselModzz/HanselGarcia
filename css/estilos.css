@@ -1,44 +1,26 @@
-/*
-La capa de presentación en una página web se puede implementar de forma externa,
-mediante un archivo, en dicho archivo se define toda la semántica para los estilos
-y desde el archivo html se hace referencia a él.
-*/
-
-/* Selector Universal - Quita los márgenes por defecto del navegador */
 * {
-    margin: 0px;
+    margin:0px;
     padding: 0px;
-    box-sizing: border-box;
-    /* Evita que el padding rompa las dimensiones */
 }
 
 body {
-    /* Color gradual en recta, se considera como una imagen */
+    /* color gradual en recta */
     background-image: linear-gradient(to right, gray, black);
-    color: white;
-    /* Color de la letra general */
-    font-family: sans-serif;
-    /* Tipografía limpia para que luzca mejor */
+    color:white;
 }
 
 div.contenedor {
     width: 95%;
     height: 100vh;
-    /* Altura al 100% de la ventana */
     margin: 5px auto;
 }
 
-/* Capa nav está dentro del div */
 div nav {
     height: 50px;
     line-height: 50px;
-    /* Centrar texto vertical tomando como referencia la altura del nav */
     padding-left: 50px;
     font-weight: bold;
     font-size: 1.2em;
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Sutil fondo para notar la barra de navegación */
-    margin-bottom: 20px;
 }
 
 div nav ul li {
@@ -46,43 +28,31 @@ div nav ul li {
     margin-right: 20px;
 }
 
-/* Estilo para los enlaces en su estado normal */
+/* Color blanco para que los enlaces no se vean morados/azules por defecto */
 div nav ul li a {
     color: white;
-    text-decoration: none;
-    /* Quita el subrayado por defecto */
-    transition: color 0.3s ease;
-    /* Hace suave el cambio de color */
+    text-decoration: none; 
 }
 
-/* Completando la regla que faltaba en tus apuntes */
 a:hover {
-    /* Cuando pasamos sobre los enlaces aparece el subrayado y en color rojo intenso */
+    /* subrayado y color rojo intenso al pasar el ratón */
     text-decoration: underline;
-    color: #ff0000 !important;
-    /* Rojo intenso */
-    cursor: pointer;
+    color: tomato;
 }
 
-/* Estilos para la sección de contenido */
-section {
-    padding: 20px 50px;
+div section {
+    padding: 30px;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+div section p {
     text-align: justify;
-    /* Hace que el texto se vea ordenado en los bloques */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    color: yellow;
+}
+
+h1, h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: blue;
 }
