@@ -1,0 +1,88 @@
+/*
+La capa de presentación en una página web se puede implementar de forma externa,
+mediante un archivo, en dicho archivo se define toda la semántica para los estilos
+y desde el archivo html se hace referencia a él.
+*/
+
+/* Selector Universal - Quita los márgenes por defecto del navegador */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* Evita que el padding rompa las dimensiones */
+}
+
+body {
+    /* Color gradual en recta, se considera como una imagen */
+    background-image: linear-gradient(to right, gray, black);
+    color: white;
+    /* Color de la letra general */
+    font-family: sans-serif;
+    /* Tipografía limpia para que luzca mejor */
+}
+
+div.contenedor {
+    width: 95%;
+    height: 100vh;
+    /* Altura al 100% de la ventana */
+    margin: 5px auto;
+}
+
+/* Capa nav está dentro del div */
+div nav {
+    height: 50px;
+    line-height: 50px;
+    /* Centrar texto vertical tomando como referencia la altura del nav */
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Sutil fondo para notar la barra de navegación */
+    margin-bottom: 20px;
+}
+
+div nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilo para los enlaces en su estado normal */
+div nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* Quita el subrayado por defecto */
+    transition: color 0.3s ease;
+    /* Hace suave el cambio de color */
+}
+
+/* Completando la regla que faltaba en tus apuntes */
+a:hover {
+    /* Cuando pasamos sobre los enlaces aparece el subrayado y en color rojo intenso */
+    text-decoration: underline;
+    color: #ff0000 !important;
+    /* Rojo intenso */
+    cursor: pointer;
+}
+
+/* Estilos para la sección de contenido */
+section {
+    padding: 20px 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    /* Hace que el texto se vea ordenado en los bloques */
+}
